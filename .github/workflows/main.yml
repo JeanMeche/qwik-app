@@ -1,0 +1,27 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.5.0
+
+      - name: Clean install dependencies
+        run: npm ci
+
+      - name: Build app
+        run: npm run build && npm run build.ssg && npm run ssg
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
