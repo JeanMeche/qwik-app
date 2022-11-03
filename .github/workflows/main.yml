@@ -18,7 +18,7 @@ jobs:
         run: npm ci
 
       - name: Build app
-        run: npm run build && npm run build.ssg && npm run ssg
+        run: npm run build.full
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
