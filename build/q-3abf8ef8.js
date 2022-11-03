@@ -1,1 +1,0 @@
-import{y as o,U as t,_ as e}from"./q-f0167140.js";const i=o(t(()=>e(()=>import("./q-43dd8958.js"),["build/q-43dd8958.js","build/q-6c355404.js","build/q-f0167140.js","build/q-8d5de787.css"]),"s_xYL1qOwPyDI")),a={title:"Welcome to Qwik"};export{i as default,a as head};
