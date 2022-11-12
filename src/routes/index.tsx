@@ -88,10 +88,7 @@ export default component$(() => {
             <code>npm run qwik add static-node</code>
           </td>
           <td>
-            <a
-              href="https://qwik.builder.io/qwikcity/static-site-generation/overview/"
-              target="_blank"
-            >
+            <a href="https://qwik.builder.io/qwikcity/static-site-generation/overview/" target="_blank">
               Static Site Generation (SSG)
             </a>
           </td>

@@ -1,5 +1,5 @@
 import { staticAdaptor } from '@builder.io/qwik-city/adaptors/static/vite';
-import { extendConfig } from '@builder.io/qwik-city/vite';
+import { extendConfig, qwikCity } from '@builder.io/qwik-city/vite';
 import baseConfig from '../../vite.config';
 
 export default extendConfig(baseConfig, () => {
@@ -11,6 +11,7 @@ export default extendConfig(baseConfig, () => {
       },
     },
     plugins: [
+      qwikCity({ basePathname: '/qwik-app/' }),
       staticAdaptor({
         origin: 'https://jeanmeche.github.io/qwik-app/',
       }),
