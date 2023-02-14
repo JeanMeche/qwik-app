@@ -18,6 +18,7 @@ export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
     manifest,
     ...opts,
+    base: '/qwik-app/build',
     prefetchStrategy: {
       implementation: {
         linkInsert: null,
