@@ -8,10 +8,10 @@
   "scripts": {
     "build": "qwik build",
     "build.client": "vite build",
+    "build.full": "npm run build && npm run build.server",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "build.full": "npm run build && npm run build.server",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
@@ -23,8 +23,8 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.105.0",
-    "@builder.io/qwik-city": "~0.104.0",
+    "@builder.io/qwik": "^1.2.6",
+    "@builder.io/qwik-city": "^1.2.6",
     "@types/eslint": "8.37.0",
     "@types/node": "^18.16.1",
     "@typescript-eslint/eslint-plugin": "5.59.1",

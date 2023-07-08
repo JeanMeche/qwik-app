@@ -12,8 +12,8 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: 'https://jeanmeche.github.io',
-        base: 'qwik-app'
+        origin: 'https://jeanmeche.github.io/',
+        base: 'qwik-city',
       }),
     ],
   };
